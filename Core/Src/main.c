@@ -210,6 +210,9 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, GPIO_PIN_RESET);
 
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOC, ACT_PC5_Pin|ACT_PC6_Pin|ACT_PC8_Pin, GPIO_PIN_RESET);
+
   /*Configure GPIO pins : B1_Pin SNS_D9_Pin */
   GPIO_InitStruct.Pin = B1_Pin|SNS_D9_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
@@ -230,6 +233,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : ACT_PC5_Pin ACT_PC6_Pin ACT_PC8_Pin */
+  GPIO_InitStruct.Pin = ACT_PC5_Pin|ACT_PC6_Pin|ACT_PC8_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : SNS_A3_Pin SNS_D4_Pin SNS_D10_Pin */
   GPIO_InitStruct.Pin = SNS_A3_Pin|SNS_D4_Pin|SNS_D10_Pin;

@@ -71,10 +71,16 @@ void Error_Handler(void);
 #define SNS_A2_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define ACT_PC5_Pin GPIO_PIN_5
+#define ACT_PC5_GPIO_Port GPIOC
 #define SNS_A3_Pin GPIO_PIN_0
 #define SNS_A3_GPIO_Port GPIOB
+#define ACT_PC6_Pin GPIO_PIN_6
+#define ACT_PC6_GPIO_Port GPIOC
 #define SNS_D9_Pin GPIO_PIN_7
 #define SNS_D9_GPIO_Port GPIOC
+#define ACT_PC8_Pin GPIO_PIN_8
+#define ACT_PC8_GPIO_Port GPIOC
 #define SNS_D7_Pin GPIO_PIN_8
 #define SNS_D7_GPIO_Port GPIOA
 #define SNS_D8_Pin GPIO_PIN_9

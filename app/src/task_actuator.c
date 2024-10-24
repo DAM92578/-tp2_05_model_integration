@@ -54,20 +54,29 @@
 #define G_TASK_ACT_CNT_INIT			0ul
 #define G_TASK_ACT_TICK_CNT_INI		0ul
 
-#define DEL_LED_XX_PUL				2500ul
+#define DEL_LED_XX_PUL				250ul
 #define DEL_LED_XX_BLI				500ul
 #define DEL_LED_XX_MIN				0ul
 
 /********************** internal data declaration ****************************/
 const task_actuator_cfg_t task_actuator_cfg_list[] = {
 	{ID_LED_A,  LED_A_PORT,  LED_A_PIN, LED_A_ON,  LED_A_OFF,
-	 DEL_LED_XX_BLI, DEL_LED_XX_PUL}
+	 DEL_LED_XX_BLI, DEL_LED_XX_PUL},
+	{ID_ACT_BARRIER_DOWN , ACT_BARRIER_DOWN_PORT,  ACT_BARRIER_DOWN, ACT_BARRIER_DOWN_ON,  ACT_BARRIER_DOWN_OFF,
+		 DEL_LED_XX_BLI, DEL_LED_XX_PUL},
+	{ID_ACT_BARRIER_UP,  ACT_BARRIER_UP_PORT,  ACT_BARRIER_UP, ACT_BARRIER_UP_ON,  ACT_BARRIER_UP_OFF,
+		 DEL_LED_XX_BLI, DEL_LED_XX_PUL},
+	{ID_ACT_PRINTER , ACT_PRINTER_PORT,  ACT_PRINTER, ACT_PRINTER_ON,  ACT_PRINTER_OFF,
+		 DEL_LED_XX_BLI, DEL_LED_XX_PUL}
 };
 
 #define ACTUATOR_CFG_QTY	(sizeof(task_actuator_cfg_list)/sizeof(task_actuator_cfg_t))
 
 task_actuator_dta_t task_actuator_dta_list[] = {
-	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false}
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
 };
 
 #define ACTUATOR_DTA_QTY	(sizeof(task_actuator_dta_list)/sizeof(task_actuator_dta_t))

@@ -104,14 +104,32 @@ extern "C" {
 #define BARRIER_DOWN_PORT					SNS_D10_GPIO_Port
 #define BTN_BARRIER_DOWN_ACTIVATED  		GPIO_PIN_RESET
 /**************************************************************/
-
-
-
-
 #define LED_A_PIN		LD2_Pin
 #define LED_A_PORT		LD2_GPIO_Port
 #define LED_A_ON		GPIO_PIN_SET
 #define LED_A_OFF		GPIO_PIN_RESET
+
+
+#define ACT_BARRIER_DOWN		ACT_PC5_Pin
+#define ACT_BARRIER_DOWN_PORT	ACT_PC5_GPIO_Port
+#define ACT_BARRIER_DOWN_ON		    GPIO_PIN_RESET
+#define ACT_BARRIER_DOWN_OFF   	    GPIO_PIN_SET
+
+
+
+#define ACT_BARRIER_UP			ACT_PC6_Pin
+#define ACT_BARRIER_UP_PORT		ACT_PC6_GPIO_Port
+#define ACT_BARRIER_UP_ON		GPIO_PIN_RESET
+#define ACT_BARRIER_UP_OFF		GPIO_PIN_SET
+
+
+#define ACT_PRINTER			ACT_PC8_Pin
+#define ACT_PRINTER_PORT	ACT_PC8_GPIO_Port
+#define ACT_PRINTER_ON		GPIO_PIN_RESET
+#define ACT_PRINTER_OFF		GPIO_PIN_SET
+/**************************************************************/
+
+
 
 #endif/* STM32 Nucleo Boards - 144 Pins */
 
