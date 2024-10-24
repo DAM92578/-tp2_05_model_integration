@@ -172,7 +172,7 @@ void task_system_update(void *parameters)
 			  {
 
 				p_task_system_dta->flag = false;
-				put_event_task_actuator(EV_LED_XX_PULSE, ID_ACT_PRINTER); /* pulso para que se imprima el ticket y que lo imprimio*/
+				put_event_task_actuator(EV_LED_XX_PULSE, ID_ACT_PRINTER);
 				p_task_system_dta->state = ST_SYS_01_WAITING_TICKET_REMOVAL;
 			  }
 			break;
@@ -182,7 +182,7 @@ void task_system_update(void *parameters)
 			if ((true == p_task_system_dta->flag) && (EV_SYS_01_TICKET_PICKED_UP_ACTIVE == p_task_system_dta->event))
 			  {
 				p_task_system_dta->flag = false;
-				put_event_task_actuator(EV_LED_XX_BLINK, ID_ACT_BARRIER_UP); /*on barrera up*/
+				put_event_task_actuator(EV_LED_XX_BLINK, ID_ACT_BARRIER_UP);
 				p_task_system_dta->state =ST_SYS_01_LIFTING_BARRIER;
 
 			  }
@@ -198,7 +198,7 @@ void task_system_update(void *parameters)
 			if ((true == p_task_system_dta->flag) && (EV_SYS_01_BARRIER_UP_ACTIVE == p_task_system_dta->event))
 			  {
 				p_task_system_dta->flag = false;
-				put_event_task_actuator(EV_LED_XX_OFF, ID_ACT_BARRIER_UP);/*off señal  barrera up*/
+				put_event_task_actuator(EV_LED_XX_OFF, ID_ACT_BARRIER_UP);
 				p_task_system_dta->state =ST_SYS_01_BARRIER_UP;
 			  }
 
@@ -209,7 +209,7 @@ void task_system_update(void *parameters)
 			if ((true == p_task_system_dta->flag) && (EV_SYS_01_CAR_ENTERED_ACTIVE == p_task_system_dta->event))
 			  {
 				p_task_system_dta->flag = false;
-				put_event_task_actuator(EV_LED_XX_BLINK, ID_ACT_BARRIER_DOWN);/*on  barrera down*/
+				put_event_task_actuator(EV_LED_XX_BLINK, ID_ACT_BARRIER_DOWN);
 				p_task_system_dta->state =ST_SYS_01_LOWERING_BARRIER;
 			  }
 			if ((true == p_task_system_dta->flag) && (EV_SYS_01_CAR_ENTRYING_ACTIVE == p_task_system_dta->event))
@@ -223,7 +223,7 @@ void task_system_update(void *parameters)
 			if ((true == p_task_system_dta->flag) && (EV_SYS_01_BARRIER_DOWN_ACTIVE == p_task_system_dta->event))
 			  {
 				p_task_system_dta->flag = false;
-				put_event_task_actuator(EV_LED_XX_OFF, ID_ACT_BARRIER_DOWN);/* off  barrera down*/
+				put_event_task_actuator(EV_LED_XX_OFF, ID_ACT_BARRIER_DOWN);
 				p_task_system_dta->state =ST_SYS_01_ENTRY_EMPTY;
 			  }
 

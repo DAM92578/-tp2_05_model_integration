@@ -61,12 +61,14 @@ extern "C" {
 
 
 
+/**************************SENSORES*****************************/
+
 #define BTN_A_PIN		B1_Pin
 #define BTN_A_PORT		B1_GPIO_Port
 #define BTN_A_PRESSED	GPIO_PIN_RESET
 #define BTN_A_HOVER		GPIO_PIN_SET
 
-/*************************************************************/
+
 #define SNS_TICKET_NOT_TAKEN		       SNS_A1_Pin
 #define	SNS_TICKET_NOT_TAKEN_PORT		   SNS_A1_GPIO_Port
 #define SNS_TICKET_NOT_TAKEN_ACTIVATED     GPIO_PIN_RESET
@@ -100,33 +102,35 @@ extern "C" {
 #define SNS_PRINT_TICKET_BTN_PORT	        SNS_D4_GPIO_Port
 #define SNS_PRINT_TICKET_BTN_ACTIVATED      GPIO_PIN_RESET
 
-#define BARRIER_DOWN						SNS_D10_Pin
-#define BARRIER_DOWN_PORT					SNS_D10_GPIO_Port
-#define BTN_BARRIER_DOWN_ACTIVATED  		GPIO_PIN_RESET
-/**************************************************************/
-#define LED_A_PIN		LD2_Pin
-#define LED_A_PORT		LD2_GPIO_Port
-#define LED_A_ON		GPIO_PIN_SET
-#define LED_A_OFF		GPIO_PIN_RESET
+#define SNS_BARRIER_DOWN					SNS_D10_Pin
+#define SNS_BARRIER_DOWN_PORT				SNS_D10_GPIO_Port
+#define SNS_BTN_BARRIER_DOWN_ACTIVATED  	GPIO_PIN_RESET
+
+/****************************ACTUADORES*******************************/
+
+#define LED_A_PIN							LD2_Pin
+#define LED_A_PORT							LD2_GPIO_Port
+#define LED_A_ON							GPIO_PIN_SET
+#define LED_A_OFF							GPIO_PIN_RESET
 
 
-#define ACT_BARRIER_DOWN		ACT_PC5_Pin
-#define ACT_BARRIER_DOWN_PORT	ACT_PC5_GPIO_Port
-#define ACT_BARRIER_DOWN_ON		    GPIO_PIN_RESET
-#define ACT_BARRIER_DOWN_OFF   	    GPIO_PIN_SET
+#define ACT_BARRIER_DOWN					ACT_PC5_Pin
+#define ACT_BARRIER_DOWN_PORT				ACT_PC5_GPIO_Port
+#define ACT_BARRIER_DOWN_ON		    		GPIO_PIN_RESET
+#define ACT_BARRIER_DOWN_OFF   	    		GPIO_PIN_SET
 
 
 
-#define ACT_BARRIER_UP			ACT_PC6_Pin
-#define ACT_BARRIER_UP_PORT		ACT_PC6_GPIO_Port
-#define ACT_BARRIER_UP_ON		GPIO_PIN_RESET
-#define ACT_BARRIER_UP_OFF		GPIO_PIN_SET
+#define ACT_BARRIER_UP						ACT_PC6_Pin
+#define ACT_BARRIER_UP_PORT					ACT_PC6_GPIO_Port
+#define ACT_BARRIER_UP_ON					GPIO_PIN_RESET
+#define ACT_BARRIER_UP_OFF					GPIO_PIN_SET
 
 
-#define ACT_PRINTER			ACT_PC8_Pin
-#define ACT_PRINTER_PORT	ACT_PC8_GPIO_Port
-#define ACT_PRINTER_ON		GPIO_PIN_RESET
-#define ACT_PRINTER_OFF		GPIO_PIN_SET
+#define ACT_PRINTER							ACT_PC8_Pin
+#define ACT_PRINTER_PORT					ACT_PC8_GPIO_Port
+#define ACT_PRINTER_ON						GPIO_PIN_RESET
+#define ACT_PRINTER_OFF						GPIO_PIN_SET
 /**************************************************************/
 
 
