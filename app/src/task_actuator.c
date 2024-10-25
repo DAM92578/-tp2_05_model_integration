@@ -73,10 +73,10 @@ const task_actuator_cfg_t task_actuator_cfg_list[] = {
 #define ACTUATOR_CFG_QTY	(sizeof(task_actuator_cfg_list)/sizeof(task_actuator_cfg_t))
 
 task_actuator_dta_t task_actuator_dta_list[] = {
-	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
-	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
-	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
-	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_NOT_BLINK, false},
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_OFF , false},
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_OFF , false},
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_OFF , false},
+	{DEL_LED_XX_MIN, ST_LED_XX_OFF, EV_LED_XX_OFF , false},
 };
 
 #define ACTUATOR_DTA_QTY	(sizeof(task_actuator_dta_list)/sizeof(task_actuator_dta_t))
@@ -178,6 +178,13 @@ void task_actuator_update(void *parameters)
 			{
 				case ST_LED_XX_OFF:
 
+					if ((true == p_task_actuator_dta->flag) && (EV_LED_XX_OFF == p_task_actuator_dta->event))
+					  {
+						p_task_actuator_dta->flag = false;
+						p_task_actuator_dta->state = ST_LED_XX_OFF;
+					  }
+
+
 					if ((true == p_task_actuator_dta->flag) && (EV_LED_XX_ON == p_task_actuator_dta->event))
 				      {
 						p_task_actuator_dta->flag = false;
@@ -230,6 +237,7 @@ void task_actuator_update(void *parameters)
 					  }
 					if ((true == p_task_actuator_dta->flag) && (EV_LED_XX_BLINK == p_task_actuator_dta->event))
 					  {
+						p_task_actuator_dta->flag = false;/**/
 						p_task_actuator_dta->state = ST_LED_XX_BLINK_ON;
 
 					  }
